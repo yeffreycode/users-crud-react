@@ -1,38 +1,194 @@
-.App {
+/* header  */
+nav,
+ul {
+  width: 100%;
+  height: 100%;
+}
+header {
+  display: flex;
+  border-bottom: 1px solid white;
+  height: 50px;
+}
+
+header nav ul {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 10px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  background-color: #def;
+  color: #123;
+  font-weight: bolder;
+  padding: 5px 15px;
+}
+header nav ul li a:hover {
+  background-color: #abc;
+}
+/* end header  */
+
+/* sections width  */
+section {
+  width: 95%;
+  margin: auto;
+  margin-top: 30px;
+}
+@media screen and (min-width: 700px) {
+  section {
+    width: 85%;
+  }
+}
+@media screen and (min-width: 900px) {
+  section {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section {
+    width: 65%;
+  }
+}
+/* end section width  */
+h1,
+p {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* table  */
+:root {
+  background-color: #000;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+th,
+td {
+  min-width: 100px;
+  overflow: auto;
+  flex: 1;
+  height: 40px;
+  border: 1px solid #234;
+  display: grid;
+  place-items: center;
+}
+th::-webkit-scrollbar,
+td::-webkit-scrollbar {
+  display: inline;
+}
+table {
+  background-color: #123;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+tr {
+  border: 0.5px solid #345;
+  display: flex;
+  min-width: fit-content;
+  width: 100%;
+}
+
+tr:nth-child(2) th:last-child,
+tr:nth-child(2) th:nth-last-child(2) {
+  max-width: 50px;
+  min-width: 40px;
+  border: none;
+}
+
+tr td:last-child,
+tr td:nth-last-child(2) {
+  max-width: 50px;
+  min-width: 40px;
+}
+
+tr td:nth-last-child(2) button,
+tr td:last-child button {
+  border-radius: 2px;
+  color: white;
+  padding: 0 5px;
+  box-shadow: 0px 0px 5px #fff;
+  border: none;
+  font-weight: bolder;
+}
+td {
+  display: grid;
+  place-items: center;
+}
+td span {
+  display: inline-block;
+}
+tr td:nth-last-child(2) button {
+  background: #000;
+  color: #0f0;
+  padding: 3px 5px;
+}
+
+tr td:last-child button {
+  background: #000;
+  color: #f00;
+  padding: 3px 5px;
+}
+
+/* form  */
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+form {
+  background-color: #121212;
+  border-radius: 10px;
+  border: 2px solid #89a;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: auto;
+}
+fieldset {
+  display: flex;
+  padding: 10px;
+  border: none;
+}
+
+fieldset input {
+  flex: 1;
+  margin-left: 20px;
+  background-color: transparent;
+  color: #def;
+  border: none;
+  border-bottom: 1px solid #89a;
+}
+
+fieldset input[type="submit"] {
+  flex: 0.5;
+  border: none;
+  background-color: #343434;
+  padding: 10px 0;
+  width: 50%;
+  margin: auto;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 700px) {
+  form {
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 900px) {
+  form {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  form {
+    width: 50%;
   }
 }
